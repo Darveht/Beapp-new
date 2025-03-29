@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .animation-delay-100 {
+    animation-delay: 0.1s;
+  }
+  
+  .animation-delay-300 {
+    animation-delay: 0.3s;
+  }
+  
+  .animation-delay-500 {
+    animation-delay: 0.5s;
+  }
+  
+  .animation-delay-700 {
+    animation-delay: 0.7s;
+  }
+  
+  .animate-bounce-slow {
+    animation: bounce 2s infinite;
+  }
+  
+  .animate-ping-slow {
+    animation: ping 1.5s cubic-bezier(0, 0, 0.2, 1) infinite;
+  }
+  
+  .animate-bounce-left {
+    animation: bounceLeft 1s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  }
+  
+  .animate-bounce-right {
+    animation: bounceRight 1s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  }
+  
+  .animate-collision {
+    animation: collision 1s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  }
+  
+  @keyframes ping {
+    0% {
+      transform: scale(0.8);
+      opacity: 1;
+    }
+    75%, 100% {
+      transform: scale(2);
+      opacity: 0;
+    }
+  }
+  
+  @keyframes bounceLeft {
+    0%, 100% {
+      transform: translateX(0);
+    }
+    40% {
+      transform: translateX(12px);
+    }
+    50% {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes bounceRight {
+    0%, 100% {
+      transform: translateX(0);
+    }
+    40% {
+      transform: translateX(-12px);
+    }
+    50% {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes collision {
+    0%, 30%, 70%, 100% {
+      transform: scale(0);
+      opacity: 0;
+    }
+    50% {
+      transform: scale(1.2);
+      opacity: 0.7;
+    }
+  }
+}
