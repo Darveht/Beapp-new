@@ -1,0 +1,36 @@
+
+# Node.js dependencies
+node_modules/
+# Build outputs
+dist/
+build/
+.next/
+out/
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+# Debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+# System files
+.DS_Store
+server/public
+vite.config.ts.*
+*.tar.gz
+Thumbs.db
+# Uploaded files - keep the directories but not the content
+uploads/apks/*
+uploads/icons/*
+!uploads/apks/.gitkeep
+!uploads/icons/.gitkeep
+# IDE and editor folders
+.idea/
+.vscode/
+*.swp
+*.swo
+# Cache
+.cache/
